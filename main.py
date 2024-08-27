@@ -82,17 +82,17 @@ FOLDER_TEMPLATE = '''<!DOCTYPE html>
             cursor: pointer;
         }}
         a {{
-            color: #000; /* Schwarzer Text */
-            text-decoration: none; /* Kein Unterstrich */
+            color: #000;
+            text-decoration: none;
         }}
         a:hover {{
-            color: #000; /* Schwarzer Text beim Hover */
-            text-decoration: none; /* Kein Unterstrich beim Hover */
+            color: #000;
+            text-decoration: none;
         }}
     </style>
 </head>
 <body>
-    <h1>PDF Übersicht - {folder_name}</h1>
+    <h1>Übersicht - {folder_name}</h1>
     <div class="pdf-container">
         {pdf_links}
     </div>
