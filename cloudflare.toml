@@ -1,0 +1,9 @@
+[[build.env]]
+NODE_VERSION = "16"
+
+[[build.command]]
+command = "python3 scripts/main.py"
+
+[[build]]
+command = "python3 scripts/main.py"
+destination = "output"
