@@ -1,0 +1,27 @@
+# Python Bytecode-Dateien
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtuelle Umgebungen
+venv/
+env/
+.venv/
+
+# Flask spezifisch
+instance/
+*.db
+
+# IDEs und Editoren
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Betriebssystem-spezifisch
+.DS_Store
+Thumbs.db
+
+# Umgebungsdateien
+.env
