@@ -2,8 +2,8 @@
 NODE_VERSION = "16"
 
 [[build.command]]
-command = "python3 scripts/main.py"
+command = "python3 main.py"
 
 [[build]]
-command = "python3 scripts/main.py"
+command = "python3 main.py"
 destination = "output"
