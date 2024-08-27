@@ -46,7 +46,7 @@ INDEX_TEMPLATE = '''<!DOCTYPE html>
     </style>
 </head>
 <body>
-    <h1>Informationsdashboard</h1>
+    <h1>Fächerübersicht</h1>
     <div id="folders-container">
         {folders_links}
     </div>
