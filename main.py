@@ -1,7 +1,7 @@
 import os
 import re
 from datetime import datetime
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, send_from_directory
 
 app = Flask(__name__)
 
@@ -37,12 +37,12 @@ INDEX_TEMPLATE = '''<!DOCTYPE html>
             background-color: #bbb;
         }}
         a {{
-            color: #000; /* Schwarzer Text */
-            text-decoration: none; /* Kein Unterstrich */
+            color: #000;
+            text-decoration: none;
         }}
         a:hover {{
-            color: #000; /* Schwarzer Text beim Hover */
-            text-decoration: none; /* Kein Unterstrich beim Hover */
+            color: #000;
+            text-decoration: none;
         }}
     </style>
 </head>
@@ -81,6 +81,9 @@ FOLDER_TEMPLATE = '''<!DOCTYPE html>
             border-radius: 5px;
             text-align: center;
             cursor: pointer;
+        }}
+        .pdf-box:hover {{
+            background-color: #eee;
         }}
         a {{
             color: #000;
@@ -124,7 +127,7 @@ def generate_folder_page(folder_path, folder_name):
     )
     
     pdf_links = '\n'.join(
-        [f'<div class="pdf-box"><a href="/pdf/{folder_name}/{pdf[0]}" target="_blank">{strip_date_from_filename(pdf[0])}</a></div>' for pdf in pdf_files_with_dates]
+        [f'<a href="/pdf/{folder_name}/{pdf[0]}" class="pdf-box" target="_blank">{strip_date_from_filename(pdf[0])}</a>' for pdf in pdf_files_with_dates]
     )
 
     folder_html = FOLDER_TEMPLATE.format(folder_name=folder_name, pdf_links=pdf_links)
@@ -175,7 +178,7 @@ def folder_page(folder_name):
     )
     
     pdf_links = '\n'.join(
-        [f'<div class="pdf-box"><a href="/pdf/{folder_name}/{pdf[0]}" target="_blank">{strip_date_from_filename(pdf[0])}</a></div>' for pdf in pdf_files_with_dates]
+        [f'<a href="/pdf/{folder_name}/{pdf[0]}" class="pdf-box" target="_blank">{strip_date_from_filename(pdf[0])}</a>' for pdf in pdf_files_with_dates]
     )
 
     folder_html = FOLDER_TEMPLATE.format(folder_name=folder_name, pdf_links=pdf_links)
